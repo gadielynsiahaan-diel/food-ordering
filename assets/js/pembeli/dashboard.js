@@ -94,7 +94,7 @@ function cardTenant(item) {
 
         item.logo && item.logo !== ""
 
-        ? "http://localhost:3000" + item.logo
+        ? "https://food-ordering-seven-rho.vercel.app" + item.logo
 
         : "";
 
@@ -240,7 +240,7 @@ if (
 
     profile.src =
 
-        "http://localhost:3000" +
+        "https://food-ordering-seven-rho.vercel.app" +
 
         user.foto;
 
