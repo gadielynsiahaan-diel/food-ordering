@@ -1,0 +1,352 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #0F4C81,
+        #2E86DE
+    );
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+/* ==========================================
+   LOGIN CARD
+========================================== */
+
+.login-card{
+
+    width:420px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+    animation:fade .5s ease;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo{
+
+    width:100px;
+
+    display:block;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.login-card h2{
+
+    text-align:center;
+
+    color:#0F4C81;
+
+    margin-bottom:10px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.input-group{
+
+    margin-bottom:20px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#333;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.input-group input:focus{
+
+    border-color:#0F4C81;
+
+    box-shadow:0 0 10px rgba(15,76,129,.2);
+
+}
+
+/* ==========================================
+   PASSWORD
+========================================== */
+
+.password-box{
+
+    position:relative;
+
+}
+
+.password-box input{
+
+    padding-right:45px;
+
+}
+
+.password-box i{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#777;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#0F4C81;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#09365d;
+
+}
+
+/* ==========================================
+   BOTTOM
+========================================== */
+
+.bottom{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+.bottom a{
+
+    color:#0F4C81;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.bottom a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:500px){
+
+.login-card{
+
+    width:100%;
+
+    padding:30px;
+
+}
+
+}
+
+/* ========================================= */
+/* BACK HOME */
+/* ========================================= */
+
+.top-back{
+
+    position:fixed;
+
+    top:25px;
+
+    left:25px;
+
+    z-index:999;
+
+}
+
+.top-back a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    background:#ffffff;
+
+    color:#1565c0;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    border-radius:12px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.top-back a:hover{
+
+    background:#1565c0;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+}

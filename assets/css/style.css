@@ -1,0 +1,698 @@
+/* ================================================= */
+/* ROOT */
+/* ================================================= */
+
+:root{
+
+    --primary:#0E5DAA;
+    --secondary:#1F8FFF;
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    --dark:#1E293B;
+    --gray:#64748B;
+    --light:#F5F7FB;
+    --white:#FFFFFF;
+
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+/* ================================================= */
+/* RESET */
+/* ================================================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--light);
+    color:var(--dark);
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+
+}
+
+/* ================================================= */
+/* HEADER */
+/* ================================================= */
+
+.header{
+
+    width:100%;
+
+    padding:25px 0;
+
+    background:white;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:70px;
+
+}
+
+.logo h2{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+}
+
+.logo span{
+
+    color:var(--gray);
+
+    font-size:14px;
+
+}
+
+/* ================================================= */
+/* HERO */
+/* ================================================= */
+
+.hero{
+
+    padding:70px 0;
+
+}
+
+.hero-content{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#E3F2FD;
+
+    color:var(--primary);
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.hero-content h1{
+
+    font-size:56px;
+
+    margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+    width:750px;
+
+    max-width:100%;
+
+    margin:auto;
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* ================================================= */
+/* ROLE CARD */
+/* ================================================= */
+
+.role-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.role-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.role-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.role-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:#E8F3FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    margin-bottom:30px;
+
+}
+
+.role-icon i{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+}
+
+.role-card h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:var(--primary);
+
+}
+
+.role-card ul{
+
+    margin-bottom:35px;
+
+}
+
+.role-card li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+    font-size:16px;
+
+}
+
+.role-card li i{
+
+    color:var(--success);
+
+}
+
+.btn-pembeli{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:55px;
+
+    border-radius:15px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-pembeli:hover{
+
+    background:#0A4B88;
+
+}
+
+.btn-penjual{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:55px;
+
+    border-radius:15px;
+
+    background:var(--success);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-penjual:hover{
+
+    background:#1E9E4A;
+
+}
+
+/* ================================================= */
+/* CARA MENGGUNAKAN */
+/* ================================================= */
+
+.flow{
+
+    padding:90px 0;
+
+}
+
+.flow h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:55px;
+
+    color:var(--dark);
+
+}
+
+.flow-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.flow-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.flow-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.flow-card span{
+
+    width:75px;
+
+    height:75px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.flow-card h3{
+
+    margin-bottom:18px;
+
+    color:var(--primary);
+
+}
+
+.flow-card p{
+
+    color:var(--gray);
+
+    line-height:1.7;
+
+}
+
+/* ================================================= */
+/* FOOTER */
+/* ================================================= */
+
+.footer{
+
+    background:#0E5DAA;
+
+    margin-top:80px;
+
+}
+
+.footer .container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+.footer p{
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+/* ================================================= */
+/* CARD EFFECT */
+/* ================================================= */
+
+.role-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.role-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+    90deg,
+    #0E5DAA,
+    #1F8FFF);
+
+    transition:.45s;
+
+}
+
+.role-card:hover::before{
+
+    left:0;
+
+}
+
+.role-card:hover{
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/* ================================================= */
+/* BUTTON EFFECT */
+/* ================================================= */
+
+.btn-pembeli,
+.btn-penjual{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn-pembeli::after,
+.btn-penjual::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:100%;
+
+    left:0;
+
+    top:0;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.4s;
+
+}
+
+.btn-pembeli:hover::after,
+.btn-penjual:hover::after{
+
+    width:100%;
+
+}
+
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media(max-width:992px){
+
+.role-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.flow-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-content h1{
+
+    font-size:45px;
+
+}
+
+.hero-content p{
+
+    font-size:17px;
+
+}
+
+}
+
+/* ================================================= */
+/* MOBILE */
+/* ================================================= */
+
+@media(max-width:576px){
+
+.header{
+
+    padding:18px 0;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo h2{
+
+    font-size:22px;
+
+}
+
+.hero{
+
+    padding:50px 0;
+
+}
+
+.hero-badge{
+
+    font-size:13px;
+
+}
+
+.hero-content h1{
+
+    font-size:34px;
+
+    line-height:1.4;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.role-card{
+
+    padding:30px;
+
+}
+
+.role-icon{
+
+    width:70px;
+
+    height:70px;
+
+}
+
+.role-icon i{
+
+    font-size:30px;
+
+}
+
+.role-card h2{
+
+    font-size:25px;
+
+}
+
+.flow{
+
+    padding:60px 0;
+
+}
+
+.flow h2{
+
+    font-size:30px;
+
+}
+
+.footer p{
+
+    font-size:13px;
+
+}
+
+}
+

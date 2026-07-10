@@ -1,0 +1,714 @@
+/* ================================================= */
+/* ROOT */
+/* ================================================= */
+
+:root{
+
+    --primary:#0E5DAA;
+    --secondary:#1F8FFF;
+    --success:#22C55E;
+    --danger:#EF4444;
+
+    --dark:#1E293B;
+    --gray:#64748B;
+    --light:#F5F7FB;
+    --white:#FFFFFF;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* ================================================= */
+/* RESET */
+/* ================================================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--light);
+
+    color:var(--dark);
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+.container{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* ================================================= */
+/* HEADER */
+/* ================================================= */
+
+.header{
+
+    width:100%;
+
+    height:85px;
+
+    background:white;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+
+}
+
+.header .container{
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo h2{
+
+    color:var(--primary);
+
+}
+
+.logo span{
+
+    color:var(--gray);
+
+    font-size:13px;
+
+}
+
+.search{
+
+    width:420px;
+
+    height:50px;
+
+    background:#EEF2F7;
+
+    border-radius:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 20px;
+
+}
+
+.search i{
+
+    color:#999;
+
+}
+
+.search input{
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    padding-left:15px;
+
+    font-size:15px;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.header-right button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    background:#EEF2F7;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.header-right button:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.profile{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+}
+
+/* ================================================= */
+/* HERO */
+/* ================================================= */
+
+.hero{
+
+    margin:35px 0;
+
+}
+
+.hero .container{
+
+    background:linear-gradient(135deg,#0E5DAA,#1F8FFF);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.hero h1{
+
+    font-size:45px;
+
+}
+
+.hero p{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+}
+
+.hero-image img{
+
+    width:250px;
+
+}
+
+/* ================================================= */
+/* CATEGORY */
+/* ================================================= */
+
+.category{
+
+    margin-bottom:35px;
+
+}
+
+.category .container{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.category button{
+
+    border:none;
+
+    background:white;
+
+    padding:13px 28px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.category button:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.category .active{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ================================================= */
+/* PROMO */
+/* ================================================= */
+
+.promo{
+
+    margin-bottom:45px;
+
+}
+
+.promo-slider{
+
+    width:100%;
+
+    height:260px;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+}
+
+.promo-slider img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.section-title{
+
+    margin-bottom:30px;
+
+}
+
+.section-title h2{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+}
+
+/* ================================================= */
+/* TENANT */
+/* ================================================= */
+
+.popular,
+.tenant{
+
+    margin-bottom:60px;
+
+}
+
+#popularContainer,
+#tenantContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+/* ================================================= */
+/* TENANT CARD */
+/* ================================================= */
+
+.tenant-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.tenant-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+/* ================================================= */
+/* TENANT IMAGE */
+/* ================================================= */
+
+.tenant-image{
+
+    position:relative;
+
+}
+
+.tenant-image img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+/* ================================================= */
+/* STATUS */
+/* ================================================= */
+
+.status{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.open{
+
+    background:#22C55E;
+
+}
+
+.close{
+
+    background:#EF4444;
+
+}
+
+.badge-promo{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    background:#F59E0B;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ================================================= */
+/* BODY */
+/* ================================================= */
+
+.tenant-body{
+
+    padding:22px;
+
+}
+
+.tenant-body h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    color:var(--dark);
+
+}
+
+/* ================================================= */
+/* BODY */
+/* ================================================= */
+
+.tenant-body{
+
+    padding:22px;
+
+}
+
+.tenant-body h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    color:var(--dark);
+
+}
+
+/* ================================================= */
+/* DESCRIPTION */
+/* ================================================= */
+
+.tenant-body p{
+
+    color:var(--gray);
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+
+}
+
+/* ================================================= */
+/* BUTTON */
+/* ================================================= */
+
+.btn-menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:50px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-menu:hover{
+
+    background:#0A4C8B;
+
+}
+
+/* ================================================= */
+/* BOTTOM NAVIGATION */
+/* ================================================= */
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:75px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.08);
+
+}
+
+.bottom-nav a{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:#666;
+
+    font-size:13px;
+
+    gap:6px;
+
+}
+
+.bottom-nav i{
+
+    font-size:20px;
+
+}
+
+.bottom-nav .active{
+
+    color:var(--primary);
+
+}
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+@media(max-width:992px){
+
+.header .container{
+
+    flex-wrap:wrap;
+
+    height:auto;
+
+    padding:20px 0;
+
+    gap:20px;
+
+}
+
+.search{
+
+    width:100%;
+
+}
+
+.hero .container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-image img{
+
+    width:180px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#popularContainer,
+#tenantContainer{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+.hero p{
+
+    font-size:15px;
+
+}
+
+.section-title h2{
+
+    font-size:24px;
+
+}
+
+.bottom-nav span{
+
+    font-size:11px;
+
+}
+
+}
+
