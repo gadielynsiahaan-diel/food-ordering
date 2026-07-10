@@ -1,1 +1,1 @@
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://food-ordering-seven-rho.vercel.app/api";
