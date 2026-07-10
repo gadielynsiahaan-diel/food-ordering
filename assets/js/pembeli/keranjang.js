@@ -38,7 +38,7 @@ function getImage(path){
 
     }
 
-    return "http://localhost:3000"+path;
+    return "https://food-ordering-seven-rho.vercel.app"+path;
 
 }
 
