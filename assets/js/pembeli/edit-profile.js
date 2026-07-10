@@ -70,7 +70,7 @@ async function loadProfile(){
 
             previewImage.src =
 
-            "http://localhost:3000"+
+            "https://food-ordering-seven-rho.vercel.app"+
 
             result.user.foto;
 
