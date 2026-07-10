@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile | Teras LA</title>
+
+    <link rel="stylesheet"
+        href="../assets/css/pembeli/edit-profile.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <a href="profile.html" class="back-btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kembali
+
+            </a>
+
+            <h2>Edit Profile</h2>
+
+        </div>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- FORM -->
+    <!-- ========================= -->
+
+    <section class="profile-section">
+
+        <div class="container">
+
+            <form
+                id="profileForm"
+                class="profile-card">
+
+                <!-- FOTO -->
+
+                <div class="photo-box">
+
+                    <img
+                        src="../assets/img/logo.png"
+                        id="previewImage"
+                        class="profile-image">
+
+                    <label
+                        for="foto"
+                        class="upload-btn">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        Ganti Foto
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="foto"
+                        accept="image/*"
+                        hidden>
+
+                </div>
+
+                <!-- NAMA -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Nama Lengkap
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        required>
+
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Email
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        readonly>
+
+                </div>
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Password Baru
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Kosongkan jika tidak ingin mengganti">
+
+                </div>
+
+                <!-- KONFIRMASI -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Konfirmasi Password
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Ulangi password">
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <div class="button-group">
+
+                    <button
+                        type="submit"
+                        class="save-btn">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Simpan Perubahan
+
+                    </button>
+
+                    <a
+                        href="profile.html"
+                        class="cancel-btn">
+
+                        Batal
+
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- CONFIG -->
+    <script src="../assets/js/config.js"></script>
+
+    <!-- JS -->
+    <script src="../assets/js/pembeli/edit-profile.js"></script>
+
+</body>
+
+</html>
