@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Laporan Penjualan</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/penjual/laporan.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="dashboard.html">
+
+            ← Dashboard
+
+        </a>
+
+        <h2>
+
+            Laporan Penjualan
+
+        </h2>
+
+    </div>
+
+</header>
+
+<section class="summary">
+
+    <div class="container">
+
+        <div class="summary-grid">
+
+            <div class="card">
+
+                <h3>
+
+                    Total Pesanan
+
+                </h3>
+
+                <h2 id="totalPesanan">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    Total Pendapatan
+
+                </h3>
+
+                <h2 id="totalPendapatan">
+
+                    Rp0
+
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    Pesanan Selesai
+
+                </h3>
+
+                <h2 id="pesananSelesai">
+
+                    0
+
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="table-section">
+
+    <div class="container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+
+                        Invoice
+
+                    </th>
+
+                    <th>
+
+                        Tanggal
+
+                    </th>
+
+                    <th>
+
+                        Status
+
+                    </th>
+
+                    <th>
+
+                        Total
+
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="laporanBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- CONFIG -->
+<script src="../assets/js/config.js"></script>
+
+<!-- LAPORAN -->
+<script src="../assets/js/penjual/laporan.js"></script>
+
+</body>
+
+</html>

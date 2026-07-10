@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Menu</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/penjual/menu.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="dashboard.html">
+
+            ← Dashboard
+
+        </a>
+
+        <h2>
+
+            Kelola Menu
+
+        </h2>
+
+    </div>
+
+</header>
+
+<section class="menu-form">
+
+<div class="container">
+
+<form
+id="menuForm"
+enctype="multipart/form-data">
+
+<div class="form-group">
+
+<label>
+
+Nama Menu
+
+</label>
+
+<input
+type="text"
+id="namaMenu"
+placeholder="Contoh : Ayam Geprek"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Harga
+
+</label>
+
+<input
+type="number"
+id="hargaMenu"
+placeholder="Harga"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Kategori
+
+</label>
+
+<select id="kategoriMenu">
+
+<option value="Makanan">
+
+Makanan
+
+</option>
+
+<option value="Minuman">
+
+Minuman
+
+</option>
+
+<option value="Snack">
+
+Snack
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Deskripsi
+
+</label>
+
+<textarea
+id="deskripsiMenu"
+placeholder="Deskripsi Menu..."></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Stok
+
+</label>
+
+<input
+type="number"
+id="stokMenu"
+placeholder="Jumlah stok"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Status
+
+</label>
+
+<select id="statusMenu">
+
+<option value="Tersedia">
+
+Tersedia
+
+</option>
+
+<option value="Habis">
+
+Habis
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Foto Menu
+
+</label>
+
+<input
+type="file"
+id="fotoMenu"
+accept="image/*">
+
+</div>
+
+<div class="form-group">
+
+<img
+
+id="previewFoto"
+
+src=""
+
+alt="Preview Foto"
+
+style="
+
+width:120px;
+height:120px;
+object-fit:cover;
+border-radius:12px;
+border:1px solid #ddd;
+display:none;
+
+">
+
+</div>
+
+<button
+type="submit"
+id="btnMenu">
+
+Tambah Menu
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section class="list-menu">
+
+<div class="container">
+
+<h2>
+
+Daftar Menu
+
+</h2>
+
+<div id="menuList">
+
+</div>
+
+</div>
+
+</section>
+
+<script src="../assets/js/config.js"></script>
+
+<script src="../assets/js/penjual/menu.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Penjual</title>
+
+    <link rel="stylesheet"
+        href="../assets/css/penjual/dashboard.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container">
+
+        <div>
+
+            <h2 id="sellerName">
+
+                Halo, Penjual 👋
+
+            </h2>
+
+            <p>
+
+                Selamat datang di Dashboard Penjual
+
+            </p>
+
+            <h3 id="tenantName">
+
+                Belum memiliki tenant
+
+            </h3>
+
+        </div>
+
+        <img
+            id="profileFoto"
+            src=""
+            class="profile"
+            alt="Profile">
+
+    </div>
+
+</header>
+
+<!-- ================= BELUM PUNYA TENANT ================= -->
+
+<section id="emptyTenant" class="empty-tenant">
+
+    <h2>
+
+        🏪 Anda belum memiliki tenant
+
+    </h2>
+
+    <p>
+
+        Silakan buat tenant terlebih dahulu.
+
+    </p>
+
+    <a href="tenant.html" class="btn-tenant">
+
+        + Buat Tenant
+
+    </a>
+
+</section>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboardMenu">
+
+    <section class="summary">
+
+        <div class="container">
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+
+                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                    <h3 id="pendapatanHari">
+
+                        Rp0
+
+                    </h3>
+
+                    <p>
+
+                        Pendapatan Hari Ini
+
+                    </p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <i class="fa-solid fa-basket-shopping"></i>
+
+                    <h3 id="pesananBaru">
+
+                        0
+
+                    </h3>
+
+                    <p>
+
+                        Pesanan Baru
+
+                    </p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <h3 id="totalMenu">
+
+                        0
+
+                    </h3>
+
+                    <p>
+
+                        Total Menu
+
+                    </p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <h3 id="ratingTenant">
+
+                        0.0
+
+                    </h3>
+
+                    <p>
+
+                        Rating Tenant
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="menu-dashboard">
+
+        <div class="container">
+
+            <div class="menu-grid">
+
+                <a href="tenant.html" class="menu-card">
+
+                    <i class="fa-solid fa-store"></i>
+
+                    <h3>Kelola Tenant</h3>
+
+                </a>
+
+                <a href="menu.html" class="menu-card">
+
+                    <i class="fa-solid fa-bowl-food"></i>
+
+                    <h3>Kelola Menu</h3>
+
+                </a>
+
+                <a href="pesanan.html" class="menu-card">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                    <h3>Pesanan</h3>
+
+                </a>
+
+                <a href="laporan.html" class="menu-card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h3>Laporan</h3>
+
+                </a>
+
+                <a href="profile.html" class="menu-card">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <h3>Profile</h3>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+<script src="../assets/js/config.js"></script>
+
+<script src="../assets/js/penjual/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Tenant</title>
+
+    <link rel="stylesheet"
+        href="../assets/css/penjual/tenant.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ===================================== -->
+    <!-- HEADER -->
+    <!-- ===================================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <a href="dashboard.html" class="back">
+
+                ← Dashboard
+
+            </a>
+
+            <h2>
+
+                Kelola Tenant
+
+            </h2>
+
+        </div>
+
+    </header>
+
+    <!-- ===================================== -->
+    <!-- FORM -->
+    <!-- ===================================== -->
+
+    <section class="form-section">
+
+        <div class="container">
+
+            <form id="tenantForm" enctype="multipart/form-data">
+
+                <!-- ====================== -->
+                <!-- NAMA -->
+                <!-- ====================== -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Nama Tenant
+
+                    </label>
+
+                    <input
+
+                        type="text"
+
+                        id="namaTenant"
+
+                        placeholder="Contoh : Semangkuk Temu"
+
+                        required>
+
+                </div>
+
+                <!-- ====================== -->
+                <!-- KATEGORI -->
+                <!-- ====================== -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Kategori
+
+                    </label>
+
+                    <select id="kategori">
+
+                        <option value="Makanan">
+
+                            Makanan
+
+                        </option>
+
+                        <option value="Minuman">
+
+                            Minuman
+
+                        </option>
+
+                        <option value="Snack">
+
+                            Snack
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- ====================== -->
+                <!-- DESKRIPSI -->
+                <!-- ====================== -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Deskripsi
+
+                    </label>
+
+                    <textarea
+
+                        id="deskripsi"
+
+                        placeholder="Deskripsi tenant...">
+
+                    </textarea>
+
+                </div>
+
+                <!-- ====================== -->
+                <!-- JAM -->
+                <!-- ====================== -->
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Jam Buka
+
+                        </label>
+
+                        <input
+
+                            type="time"
+
+                            id="jamBuka"
+
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Jam Tutup
+
+                        </label>
+
+                        <input
+
+                            type="time"
+
+                            id="jamTutup"
+
+                            required>
+
+                    </div>
+
+                </div>
+
+                <!-- ====================== -->
+                <!-- STATUS -->
+                <!-- ====================== -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Status
+
+                    </label>
+
+                    <select id="status">
+
+                        <option value="open">
+
+                            Buka
+
+                        </option>
+
+                        <option value="close">
+
+                            Tutup
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- ====================== -->
+                <!-- LOGO -->
+                <!-- ====================== -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Logo Tenant
+
+                    </label>
+
+                    <input
+
+                        type="file"
+
+                        id="logo"
+
+                        name="logo"
+
+                        accept=".png,.jpg,.jpeg,.webp">
+
+                    <img
+
+                        id="previewLogo"
+
+                        src=""
+
+                        alt="Preview Logo"
+
+                        style="
+                        margin-top:15px;
+                        width:120px;
+                        height:120px;
+                        object-fit:cover;
+                        border-radius:12px;
+                        border:1px solid #ddd;
+                        display:none;
+                        ">
+
+                </div>
+
+                <!-- ====================== -->
+                <!-- BANNER -->
+                <!-- ====================== -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Banner Tenant
+
+                    </label>
+
+                    <input
+
+                        type="file"
+
+                        id="banner"
+
+                        name="banner"
+
+                        accept=".png,.jpg,.jpeg,.webp">
+
+                    <img
+
+                        id="previewBanner"
+
+                        src=""
+
+                        alt="Preview Banner"
+
+                        style="
+                        margin-top:15px;
+                        width:100%;
+                        max-height:220px;
+                        object-fit:cover;
+                        border-radius:12px;
+                        border:1px solid #ddd;
+                        display:none;
+                        ">
+
+                </div>
+
+                <!-- ====================== -->
+                <!-- BUTTON -->
+                <!-- ====================== -->
+
+                <button
+
+                    type="submit"
+
+                    id="btnSimpan">
+
+                    Simpan Tenant
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="../assets/js/config.js"></script>
+
+    <script src="../assets/js/penjual/tenant.js"></script>
+
+</body>
+
+</html>
