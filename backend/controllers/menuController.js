@@ -258,11 +258,7 @@ exports.createMenu = async (req, res) => {
 
         ) {
 
-            gambar =
-
-                "/uploads/menu/" +
-
-                req.file.filename;
+            gambar = req.file.path;
 
         }
 
