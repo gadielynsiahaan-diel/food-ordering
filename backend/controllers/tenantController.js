@@ -358,11 +358,7 @@ exports.createTenant = async (req, res) => {
 
         ) {
 
-            logo =
-
-                "/uploads/tenant/" +
-
-                req.files.logo[0].filename;
+            logo = req.files.logo[0].path;
 
         }
 
@@ -382,11 +378,7 @@ exports.createTenant = async (req, res) => {
 
         ) {
 
-            banner =
-
-                "/uploads/tenant/" +
-
-                req.files.banner[0].filename;
+            banner = req.files.banner[0].path;
 
         }
 
