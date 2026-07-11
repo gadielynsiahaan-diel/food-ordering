@@ -8,7 +8,7 @@ const fs = require("fs");
 // STORAGE
 // ======================================
 
-const storage = multer.diskStorage({
+const storage = CloudinaryStorage({
 
     destination: function (req, file, cb) {
 
