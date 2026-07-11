@@ -2,33 +2,34 @@ const multer = require("multer");
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const cloudinary = require("../config/cloudinary");
 
+// ======================================
+// STORAGE CLOUDINARY
+// ======================================
+
 const storage = new CloudinaryStorage({
     cloudinary,
     params: async (req, file) => {
 
-        let folder = "tenant";
+        let folder = "food-ordering/tenant";
 
         if (file.fieldname === "gambar") {
-            folder = "menu";
+            folder = "food-ordering/menu";
         }
 
         if (file.fieldname === "foto") {
-            folder = "profile";
-        }
-
-        if (
-            file.fieldname === "logo" ||
-            file.fieldname === "banner"
-        ) {
-            folder = "tenant";
+            folder = "food-ordering/profile";
         }
 
         return {
-            folder: `food-ordering/${folder}`,
+            folder,
             allowed_formats: ["jpg", "jpeg", "png", "webp"]
         };
     }
 });
+
+// ======================================
+// FILTER
+// ======================================
 
 const fileFilter = (req, file, cb) => {
 
@@ -47,10 +48,18 @@ const fileFilter = (req, file, cb) => {
 
 };
 
+// ======================================
+// EXPORT
+// ======================================
+
 module.exports = multer({
+
     storage,
+
     fileFilter,
+
     limits: {
         fileSize: 5 * 1024 * 1024
     }
+
 });
