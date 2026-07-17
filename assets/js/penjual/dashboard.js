@@ -66,10 +66,7 @@ if (
 ) {
 
     profileImage.src =
-
-    "https://food-ordering-seven-rho.vercel.app" +
-
-    user.foto;
+    getImageUrl(user.foto);
 
 }
 
