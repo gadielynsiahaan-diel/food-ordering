@@ -750,21 +750,11 @@ exports.updateMenu = async (req, res) => {
         // FOTO MENU
         // ======================================
 
-        let gambar =
+        let gambar = menu[0].gambar;
 
-            menu[0].gambar;
+        if(req.file){
 
-        if (
-
-            req.file
-
-        ) {
-
-            gambar =
-
-                "/uploads/menu/" +
-
-                req.file.filename;
+            gambar = req.file.path;
 
         }
 
