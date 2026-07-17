@@ -903,10 +903,7 @@ exports.updateTenant = async (req, res) => {
         ) {
 
             logo =
-
-                "/uploads/tenant/" +
-
-                req.files.logo[0].filename;
+                req.files.logo[0].path;
 
         }
 
@@ -925,10 +922,7 @@ exports.updateTenant = async (req, res) => {
         ) {
 
             banner =
-
-                "/uploads/tenant/" +
-
-                req.files.banner[0].filename;
+                req.files.banner[0].path;
 
         }
 
