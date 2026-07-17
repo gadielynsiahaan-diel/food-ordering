@@ -16,8 +16,6 @@ if (!token) {
 // CONFIG
 // ======================================
 
-const BASE_URL = API_URL.replace("/api", "");
-
 const form = document.getElementById("menuForm");
 
 const menuList = document.getElementById("menuList");
@@ -464,7 +462,7 @@ function renderMenu(data) {
 
                 class="menu-image"
 
-                src="${item.gambar ? BASE_URL + item.gambar : ""}"
+                src="${item.gambar || ""}"
 
                 alt="${item.nama}">
 
@@ -593,8 +591,7 @@ async function editMenu(id) {
         if (item.gambar) {
 
             previewFoto.src =
-
-                BASE_URL + item.gambar;
+                item.gambar;
 
             previewFoto.style.display =
 
