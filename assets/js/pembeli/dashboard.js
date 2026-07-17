@@ -11,6 +11,24 @@ document.getElementById("popularContainer");
 let tenants = [];
 
 /* ========================================= */
+/* URL GAMBAR */
+/* ========================================= */
+
+function getImageUrl(path){
+
+    if(!path){
+        return "";
+    }
+
+    if(path.startsWith("http")){
+        return path;
+    }
+
+    return API_URL + path;
+
+}
+
+/* ========================================= */
 /* LOAD DATA */
 /* ========================================= */
 
@@ -39,6 +57,8 @@ async function loadTenant() {
         );
 
         tenants = await response.json();
+
+        console.log("DATA TENANT :", tenants);
 
         tenantContainer.innerHTML = "";
 
@@ -90,23 +110,7 @@ function loadPopular() {
 
 function cardTenant(item) {
 
-    function getImageUrl(path){
-
-        if(!path){
-    
-            return "";
-    
-        }
-    
-        if(path.startsWith("http")){
-    
-            return path;
-    
-        }
-    
-        return API_URL + path;
-    
-    }
+    const logo = getImageUrl(item.logo);
 
     return `
 
@@ -115,13 +119,9 @@ function cardTenant(item) {
         <div class="tenant-image">
 
             <img
-
                 src="${logo}"
-
                 alt="${item.nama}"
-
                 onerror="this.style.display='none'"
-
             >
 
             <span class="status ${item.status}">
@@ -157,11 +157,8 @@ function cardTenant(item) {
             </p>
 
             <a
-
                 href="menu-tenant.html?id=${item.id}"
-
                 class="btn-menu"
-
             >
 
                 Lihat Menu
@@ -230,7 +227,7 @@ const user =
 
 JSON.parse(
 
-localStorage.getItem("user")
+    localStorage.getItem("user")
 
 );
 
