@@ -28,7 +28,7 @@ function getImage(path){
 
     }
 
-    return "https://food-ordering-seven-rho.vercel.app"+path;
+    return API_URL + path;
 
 }
 
