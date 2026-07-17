@@ -505,13 +505,9 @@ exports.updateProfile = async (req, res) => {
         let foto = null;
 
         if (req.file) {
-
-            foto =
-
-                "/uploads/profile/" +
-
-                req.file.filename;
-
+        
+            foto = req.file.path;
+        
         }
 
         // ===============================
