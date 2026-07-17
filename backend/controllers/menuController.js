@@ -248,15 +248,9 @@ exports.createMenu = async (req, res) => {
         // FOTO MENU
         // ======================================
 
-        let gambar =
+        let gambar = "";
 
-            "/uploads/default-menu.jpg";
-
-        if (
-
-            req.file
-
-        ) {
+        if(req.file){
 
             gambar = req.file.path;
 
