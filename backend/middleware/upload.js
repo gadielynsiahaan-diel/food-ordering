@@ -1,65 +1,76 @@
 const multer = require("multer");
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
+
 const cloudinary = require("../config/cloudinary");
 
-// ======================================
-// STORAGE CLOUDINARY
-// ======================================
+const {
+
+    CloudinaryStorage
+
+} = require("multer-storage-cloudinary");
 
 const storage = new CloudinaryStorage({
+
     cloudinary,
+
     params: async (req, file) => {
 
-        let folder = "food-ordering/tenant";
+        let folder = "food-ordering";
 
-        if (file.fieldname === "gambar") {
-            folder = "food-ordering/menu";
+        if(file.fieldname==="gambar"){
+
+            folder = "menu";
+
         }
 
-        if (file.fieldname === "foto") {
-            folder = "food-ordering/profile";
+        if(file.fieldname==="logo"){
+
+            folder = "tenant";
+
+        }
+
+        if(file.fieldname==="banner"){
+
+            folder = "tenant";
+
+        }
+
+        if(file.fieldname==="foto"){
+
+            folder = "profile";
+
         }
 
         return {
+
             folder,
-            allowed_formats: ["jpg", "jpeg", "png", "webp"]
+
+            allowed_formats:[
+
+                "jpg",
+
+                "jpeg",
+
+                "png",
+
+                "webp"
+
+            ]
+
         };
+
     }
+
 });
 
-// ======================================
-// FILTER
-// ======================================
-
-const fileFilter = (req, file, cb) => {
-
-    const allowed = [
-        "image/jpeg",
-        "image/jpg",
-        "image/png",
-        "image/webp"
-    ];
-
-    if (allowed.includes(file.mimetype)) {
-        cb(null, true);
-    } else {
-        cb(new Error("File harus berupa JPG, PNG atau WEBP."), false);
-    }
-
-};
-
-// ======================================
-// EXPORT
-// ======================================
 
 module.exports = multer({
 
     storage,
 
-    fileFilter,
+    limits:{
 
-    limits: {
-        fileSize: 5 * 1024 * 1024
+        fileSize:5*1024*1024
+
     }
 
 });
