@@ -90,13 +90,23 @@ function loadPopular() {
 
 function cardTenant(item) {
 
-    const logo =
+    function getImageUrl(path){
 
-        item.logo && item.logo !== ""
-
-        ? "https://food-ordering-seven-rho.vercel.app" + item.logo
-
-        : "";
+        if(!path){
+    
+            return "";
+    
+        }
+    
+        if(path.startsWith("http")){
+    
+            return path;
+    
+        }
+    
+        return API_URL + path;
+    
+    }
 
     return `
 
@@ -238,11 +248,7 @@ if (
 
 ) {
 
-    profile.src =
-
-        "https://food-ordering-seven-rho.vercel.app" +
-
-        user.foto;
+    profile.src = getImageUrl(user.foto);
 
 }
 
