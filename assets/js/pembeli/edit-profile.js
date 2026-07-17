@@ -31,6 +31,24 @@ const foto = document.getElementById("foto");
 const previewImage = document.getElementById("previewImage");
 
 // ==========================================
+// URL GAMBAR
+// ==========================================
+
+function getImageUrl(path){
+
+    if(!path){
+        return "";
+    }
+
+    if(path.startsWith("http")){
+        return path;
+    }
+
+    return API_URL + path;
+
+}
+
+// ==========================================
 // LOAD PROFILE
 // ==========================================
 
@@ -68,13 +86,11 @@ async function loadProfile(){
 
         if(result.user.foto){
 
-            previewImage.src =
-
-            "https://food-ordering-seven-rho.vercel.app"+
-
-            result.user.foto;
-
-        }
+             previewImage.src =
+         
+             getImageUrl(result.user.foto);
+         
+         }
 
     }
 
