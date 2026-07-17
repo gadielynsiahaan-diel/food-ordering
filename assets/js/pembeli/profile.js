@@ -20,6 +20,24 @@ const logoutBtn =
 document.getElementById("logoutBtn");
 
 /* ==========================================
+   URL GAMBAR
+========================================== */
+
+function getImageUrl(path){
+
+    if(!path){
+        return "";
+    }
+
+    if(path.startsWith("http")){
+        return path;
+    }
+
+    return API_URL + path;
+
+}
+
+/* ==========================================
    BELUM LOGIN
 ========================================== */
 
@@ -101,13 +119,11 @@ async function loadProfile(){
 
         if(result.user.foto){
 
-            profileImage.src =
-
-            "https://food-ordering-seven-rho.vercel.app"+
-
-            result.user.foto;
-
-        }
+             profileImage.src =
+         
+             getImageUrl(result.user.foto);
+         
+         }
 
         localStorage.setItem(
 
