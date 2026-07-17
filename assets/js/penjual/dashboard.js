@@ -50,6 +50,23 @@ const profileImage =
 document.querySelector(".profile");
 
 // =====================================
+// IMAGE URL
+// =====================================
+
+function getImageUrl(path){
+
+    if(!path) return "";
+
+    // kalau dari Cloudinary
+    if(path.startsWith("http")){
+        return path;
+    }
+
+    // kalau masih foto lama di uploads
+    return API_URL + path;
+}
+
+// =====================================
 // USER
 // =====================================
 
