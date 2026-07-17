@@ -20,17 +20,23 @@ const DEFAULT_BANNER =
 
 const deleteFile = (filePath) => {
 
+    // Cloudinary tidak perlu dihapus dulu
+    if (
+        !filePath ||
+        filePath.startsWith("http")
+    ) {
+        return;
+    }
+
+    // gambar default
+    if (
+        filePath.includes("default-logo") ||
+        filePath.includes("default-banner")
+    ) {
+        return;
+    }
+
     try {
-
-        if (!filePath) return;
-
-        // jangan hapus gambar default
-        if (
-            filePath.includes("default-logo") ||
-            filePath.includes("default-banner")
-        ) {
-            return;
-        }
 
         const fullPath = path.join(
             __dirname,
@@ -39,14 +45,15 @@ const deleteFile = (filePath) => {
         );
 
         if (fs.existsSync(fullPath)) {
-
             fs.unlinkSync(fullPath);
-
         }
 
     } catch (err) {
 
-        console.log("Gagal menghapus file:", err.message);
+        console.log(
+            "Gagal menghapus file:",
+            err.message
+        );
 
     }
 
