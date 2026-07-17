@@ -82,10 +82,7 @@ async function loadProfile() {
         ) {
 
             profileImage.src =
-
-                "https://food-ordering-seven-rho.vercel.app" +
-
-                result.user.foto;
+            getImageUrl(result.user.foto);
 
         }
 
