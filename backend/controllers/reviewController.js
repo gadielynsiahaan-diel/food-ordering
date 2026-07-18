@@ -129,7 +129,12 @@ exports.createReview = async (req, res) => {
 
         const avgRating = rows[0].rating || 0;
         const totalReview = rows[0].total_review || 0;
-
+        
+        // DEBUG
+        console.log("Tenant ID :", tenantId);
+        console.log("Rating :", avgRating);
+        console.log("Total Review :", totalReview);
+        
         // UPDATE TENANTS
         await db.query(
             `
