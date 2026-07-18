@@ -6,6 +6,8 @@ const db = require("../config/db");
 
 exports.createReview = async (req, res) => {
 
+    console.log("CREATE REVIEW DIPANGGIL");
+
     try {
 
         // HANYA BUYER
@@ -55,6 +57,8 @@ exports.createReview = async (req, res) => {
                 userId
             ]
         );
+
+        console.log("DATA ORDER :", order);
 
         if (order.length === 0) {
             return res.status(404).json({
@@ -110,9 +114,16 @@ exports.createReview = async (req, res) => {
             ]
         );
 
-        // HITUNG ULANG RATING
+        console.log("REVIEW BERHASIL DITAMBAHKAN");
+
+        // =================================================
+        // HITUNG ULANG RATING TENANT
+        // =================================================
+
         const tenantId = order[0].tenant_id;
-        
+
+        console.log("TENANT ID :", tenantId);
+
         const [rows] = await db.query(
             `
             SELECT
@@ -123,17 +134,19 @@ exports.createReview = async (req, res) => {
             `,
             [tenantId]
         );
-        
-        console.log(rows);
-        
+
+        console.log("HASIL AVG RATING :", rows);
+
         const avgRating = rows[0].rating || 0;
         const totalReview = rows[0].total_review || 0;
-        
-        console.log("Tenant ID :", tenantId);
-        console.log("Rating :", avgRating);
-        console.log("Total Review :", totalReview);
-        
-        // UPDATE TENANTS
+
+        console.log("AVG RATING :", avgRating);
+        console.log("TOTAL REVIEW :", totalReview);
+
+        // =================================================
+        // UPDATE TABEL TENANTS
+        // =================================================
+
         await db.query(
             `
             UPDATE tenants
@@ -149,10 +162,22 @@ exports.createReview = async (req, res) => {
             ]
         );
 
-        // DEBUG
-        console.log("Tenant ID :", tenantId);
-        console.log("Rating :", avgRating);
-        console.log("Total Review :", totalReview);
+        console.log("UPDATE TENANT BERHASIL");
+
+        // CEK DATA SETELAH UPDATE
+        const [tenant] = await db.query(
+            `
+            SELECT
+                id,
+                rating,
+                total_review
+            FROM tenants
+            WHERE id = ?
+            `,
+            [tenantId]
+        );
+
+        console.log("DATA TENANT SETELAH UPDATE :", tenant);
 
         return res.status(201).json({
             success: true,
@@ -161,7 +186,7 @@ exports.createReview = async (req, res) => {
 
     } catch (err) {
 
-        console.error(err);
+        console.error("ERROR REVIEW :", err);
 
         return res.status(500).json({
             success: false,
@@ -181,53 +206,35 @@ exports.getReviewByOrder = async (req, res) => {
     try {
 
         const [review] = await db.query(
-
-            `SELECT *
-
+            `
+            SELECT *
             FROM reviews
-
-            WHERE order_id = ?`,
-
+            WHERE order_id = ?
+            `,
             [
-
                 req.params.orderId
-
             ]
-
         );
 
         if (review.length === 0) {
-
             return res.status(404).json({
-
                 success: false,
-
                 message: "Review belum ada."
-
             });
-
         }
 
         return res.status(200).json({
-
             success: true,
-
             review: review[0]
-
         });
 
-    }
-
-    catch (err) {
+    } catch (err) {
 
         console.error(err);
 
         return res.status(500).json({
-
             success: false,
-
             message: "Terjadi kesalahan pada server."
-
         });
 
     }
