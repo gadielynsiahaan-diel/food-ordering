@@ -382,10 +382,8 @@ img{
 #tenantContainer{
 
     display:grid;
-
-    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-
-    gap:30px;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:25px;
 
 }
 
@@ -638,35 +636,37 @@ img{
 }
 
 /* ================================================= */
-/* RESPONSIVE */
+/* TABLET */
 /* ================================================= */
 
-@media(max-width:992px){
+@media (max-width:992px){
+
+.header{
+    height:auto;
+    padding:15px 0;
+}
 
 .header .container{
-
     flex-wrap:wrap;
-
-    height:auto;
-
-    padding:20px 0;
-
-    gap:20px;
-
+    gap:15px;
 }
 
 .search{
-
     width:100%;
-
 }
 
 .hero .container{
 
-    flex-direction:column;
+    padding:30px;
 
-    text-align:center;
+}
 
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:15px;
 }
 
 .hero-image img{
@@ -677,38 +677,214 @@ img{
 
 }
 
-@media(max-width:768px){
+
+/* ================================================= */
+/* MOBILE */
+/* ================================================= */
+
+@media (max-width:768px){
+
+/* HEADER */
+
+.header{
+    height:auto;
+    padding:10px 0;
+}
+
+.logo{
+    gap:10px;
+}
+
+.logo img{
+    width:45px;
+}
+
+.logo h2{
+    font-size:20px;
+}
+
+.logo span{
+    font-size:12px;
+}
+
+
+/* SEARCH */
+
+.search{
+    width:100%;
+    height:45px;
+}
+
+
+/* ICON ATAS */
+
+.header-right{
+    gap:8px;
+}
+
+.header-right button{
+    width:38px;
+    height:38px;
+}
+
+.profile{
+    width:38px;
+    height:38px;
+}
+
+
+/* HERO */
+
+.hero{
+    margin:20px 0;
+}
+
+.hero .container{
+    padding:25px;
+    border-radius:25px;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+.hero-image img{
+    width:130px;
+}
+
+
+/* CATEGORY */
+
+.category button{
+    padding:10px 20px;
+    font-size:13px;
+}
+
+
+/* TENANT */
 
 #popularContainer,
 #tenantContainer{
 
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+
+}
+
+
+/* CARD */
+
+.tenant-card{
+    border-radius:18px;
+}
+
+
+/* IMAGE */
+
+.tenant-image img{
+
+    height:140px;
+
+}
+
+
+/* STATUS */
+
+.status{
+    padding:6px 12px;
+    font-size:11px;
+}
+
+
+/* BODY */
+
+.tenant-body{
+    padding:15px;
+}
+
+.tenant-body h3{
+    font-size:18px;
+}
+
+.tenant-body p{
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+
+/* BUTTON */
+
+.btn-menu{
+
+    height:42px;
+    font-size:14px;
+
+}
+
+
+/* SECTION TITLE */
+
+.section-title h2{
+    font-size:26px;
+}
+
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+    height:70px;
+}
+
+.bottom-nav i{
+    font-size:18px;
+}
+
+.bottom-nav span{
+    font-size:11px;
+}
+
+}
+
+
+/* ================================================= */
+/* HP KECIL */
+/* ================================================= */
+
+@media (max-width:480px){
+
+#popularContainer,
+#tenantContainer{
+
+    grid-template-columns:repeat(2,1fr);
 
 }
 
 .hero h1{
-
-    font-size:32px;
-
-}
-
-.hero p{
-
-    font-size:15px;
-
-}
-
-.section-title h2{
-
     font-size:24px;
-
 }
 
-.bottom-nav span{
+.hero-image img{
+    width:110px;
+}
 
-    font-size:11px;
+.logo h2{
+    font-size:18px;
+}
 
+.tenant-image img{
+    height:120px;
+}
+
+.tenant-body h3{
+    font-size:16px;
+}
+
+.btn-menu{
+    font-size:13px;
 }
 
 }
-
