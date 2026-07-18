@@ -200,6 +200,48 @@ exports.createReview = async (req, res) => {
 
         );
 
+        // ======================================
+        // UPDATE RATING TENANT
+        // ======================================
+        
+        const tenantId = order[0].tenant_id;
+        
+        const [ratingTenant] = await db.query(
+        
+            `SELECT
+        
+                ROUND(AVG(rating),1) AS rating,
+                COUNT(*) AS total_review
+        
+            FROM reviews
+        
+            WHERE tenant_id = ?`,
+        
+            [tenantId]
+        
+        );
+        
+        await db.query(
+        
+            `UPDATE tenants
+        
+            SET
+        
+                rating = ?,
+                total_review = ?
+        
+            WHERE id = ?`,
+        
+            [
+        
+                ratingTenant[0].rating,
+                ratingTenant[0].total_review,
+                tenantId
+        
+            ]
+        
+        );
+
         return res.status(201).json({
 
             success: true,
