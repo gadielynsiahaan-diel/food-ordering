@@ -1,3 +1,9 @@
+const db = require("../config/db");
+
+// ======================================
+// CREATE REVIEW
+// ======================================
+
 exports.createReview = async (req, res) => {
 
     try {
@@ -157,6 +163,68 @@ exports.createReview = async (req, res) => {
         return res.status(500).json({
             success: false,
             message: "Terjadi kesalahan pada server."
+        });
+
+    }
+
+};
+
+// ======================================
+// GET REVIEW BY ORDER
+// ======================================
+
+exports.getReviewByOrder = async (req, res) => {
+
+    try {
+
+        const [review] = await db.query(
+
+            `SELECT *
+
+            FROM reviews
+
+            WHERE order_id = ?`,
+
+            [
+
+                req.params.orderId
+
+            ]
+
+        );
+
+        if (review.length === 0) {
+
+            return res.status(404).json({
+
+                success: false,
+
+                message: "Review belum ada."
+
+            });
+
+        }
+
+        return res.status(200).json({
+
+            success: true,
+
+            review: review[0]
+
+        });
+
+    }
+
+    catch (err) {
+
+        console.error(err);
+
+        return res.status(500).json({
+
+            success: false,
+
+            message: "Terjadi kesalahan pada server."
+
         });
 
     }
